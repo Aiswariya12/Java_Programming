@@ -1,3 +1,16 @@
+/*
+ * =====================================================================
+ * Problem Statement: Write a Java program to check whether a given number 
+ * is a Strong Number. (A Strong Number is a special number whose sum of 
+ * the factorial of its digits is equal to the original number.)
+ * 
+ * Example:
+ * Input: num = 145
+ * Output: true
+ * Explanation: 1! + 4! + 5! = 1 + 24 + 120 = 145
+ * =====================================================================
+ */
+
 package numberprograms;
 
 public class StrongNumber {
