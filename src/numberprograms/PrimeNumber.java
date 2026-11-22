@@ -26,12 +26,12 @@ public class PrimeNumber {
 
 	public boolean isPrime(int num) {
         if (num <= 1) {
-            return false; // Numbers <= 1 are not prime
+            return false; 
         }
 
         for (int i = 2; i * i <= num; i++) {
             if (num % i == 0) {
-                return false; // Found a divisor other than 1 and itself
+                return false;
             }
         }
 
