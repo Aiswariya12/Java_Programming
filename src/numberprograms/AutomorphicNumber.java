@@ -15,4 +15,31 @@ package numberprograms;
 
 public class AutomorphicNumber {
 
+	public static void main(String[] args) {
+        int num = 25;
+
+        AutomorphicNumber obj = new AutomorphicNumber();
+        boolean result = obj.isAutomorphic(num);
+
+        System.out.println("Input: " + num);
+        System.out.println("Output: " + result);
+    }
+	
+	public boolean isAutomorphic(int num) {
+        if (num < 0) {
+            return false; // Automorphic numbers are non-negative integers
+        }
+
+        long square = (long) num * num;
+
+        while (num > 0) {
+            if (num % 10 != square % 10) {
+                return false; // Last digits do not match
+            }
+            num /= 10;
+            square /= 10;
+        }
+
+        return true;
+    }
 }
