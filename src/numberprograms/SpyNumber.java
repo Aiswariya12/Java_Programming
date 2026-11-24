@@ -15,5 +15,32 @@ package numberprograms;
 
 public class SpyNumber {
 	
+	public static void main(String[] args) {
+        int num = 1124;
+
+        SpyNumber obj = new SpyNumber();
+        boolean result = obj.isSpyNumber(num);
+
+        System.out.println("Input: " + num);
+        System.out.println("Output: " + result);
+    }
+	
+	public boolean isSpyNumber(int num) {
+        if (num <= 0) {
+            return false;
+        }
+
+        int sum = 0;
+        int product = 1;
+
+        while (num > 0) {
+            int digit = num % 10;
+            sum += digit;        
+            product *= digit;     
+            num /= 10;            
+        }
+
+        return sum == product;
+    }
 
 }
